@@ -19,10 +19,10 @@ jobs:
 
       - name: Build Tweak
         run: |
-          make package
+          make package FINALPACKAGE=1
           
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
           name: iOS-Mod-Menu
-          path: packages/*.dylib
+          path: ./*.dylib
